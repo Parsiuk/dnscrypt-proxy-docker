@@ -1,15 +1,16 @@
 # Even simpler dnscrypt-proxy usage via Docker
-[![Build Status](https://travis-ci.org/dnscryptio/dnscrypt-proxy-docker.svg?branch=master)](https://travis-ci.org/dnscryptio/dnscrypt-proxy-docker)
+
+This Dockerfile is using Debian 11 and the latest version of dnscrypt-proxy. Provided configuration is listening on all ports.
 
 # Usage
 
 Build the image:
 
-	docker build -t dnscrypt-proxy .
+    docker build -t dnscrypt-proxy .
 
 Start the container:
 
-	docker run -d -p 127.0.0.1:50053:50053/udp dnscrypt-proxy
+    docker run -d -p 0.0.0.0:50053:53/udp --name dnscrypt-proxy dnscrypt-proxy
 
 # Credit
 
