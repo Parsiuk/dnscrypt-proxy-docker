@@ -13,4 +13,4 @@ Start the container:
 
 # Credit
 
-The Dockerfile in this project is based on [dnscryptio/dnscrypt-proxy-docker]https://github.com/dnscryptio/dnscrypt-proxy-docker(), which in turn is based on [dnscrypt-server-docker](https://github.com/jedisct1/dnscrypt-server-docker) by [Frank Denis](https://00f.net/).
+The Dockerfile in this project is based on [dnscryptio/dnscrypt-proxy-docker](https://github.com/dnscryptio/dnscrypt-proxy-docker), which in turn is based on [dnscrypt-server-docker](https://github.com/jedisct1/dnscrypt-server-docker) by [Frank Denis](https://00f.net/).
