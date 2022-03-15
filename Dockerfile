@@ -26,9 +26,13 @@ RUN set -x && \
     mkdir -p /opt/dnscrypt-proxy/ && \
     mkdir -p /etc/dnscrypt-proxy/ && \
     cp ./linux-x86_64/dnscrypt-proxy /opt/dnscrypt-proxy/ && \
-    cp ./linux-x86_64/example-dnscrypt-proxy.toml /etc/dnscrypt-proxy/dnscrypt-proxy.toml && \
     rm -fr /tmp/* /var/tmp/*
 
-EXPOSE 50053/tcp 50053/udp
+VOLUME /etc/dnscrypt-proxy/
+WORKDIR /opt/dnscrypt-proxy/
+
+COPY ./dnscrypt-proxy.toml /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+
+EXPOSE 53/udp
 
 CMD /opt/dnscrypt-proxy/dnscrypt-proxy -config /etc/dnscrypt-proxy/dnscrypt-proxy.toml
