@@ -1,5 +1,6 @@
 FROM debian:11
-MAINTAINER dnscrypt.io
+LABEL version="1.0"
+LABEL maintainer="Parsiuk"
 
 ENV DEPENDENCIES \
     bzip2 \
